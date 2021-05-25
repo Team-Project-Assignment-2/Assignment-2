@@ -1,21 +1,13 @@
 ﻿using System;
 
-<<<<<<< HEAD
 namespace Team_software_project
-=======
-namespace ConsoleApp10
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("What do you want to do? [list, quit]");
-<<<<<<< HEAD
             string[] animals = { "0 - bear", "1 - cat", "2 - dog", "3 - bird" };
-=======
-            string[] animals = { "wolf", "tiger", "bear", "cat", "dog", "bird" };
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
             string answer = Console.ReadLine();
             while (true)
             {
@@ -23,10 +15,7 @@ namespace ConsoleApp10
                 {
                     break;
                 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
                 if (answer == "list")
                 {
                     Console.WriteLine("Here they are:");
@@ -34,7 +23,6 @@ namespace ConsoleApp10
                     {
                         Console.WriteLine(all);
                     }
-<<<<<<< HEAD
 
 
                     Console.WriteLine("Which animal do you want to see? Give number of the animal 0-3");
@@ -50,17 +38,6 @@ namespace ConsoleApp10
                             Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
                             string action = Console.ReadLine();
 
-=======
-                    Console.WriteLine("Which animal do you want to see?");
-                    string animal = Console.ReadLine();
-                    if (animal == "cat")
-                    {
-                        string name = animal;
-                        while (true)
-                        {
-                            Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                            string action = Console.ReadLine();
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
                             if (action == "back")
                             {
                                 break;
@@ -71,7 +48,6 @@ namespace ConsoleApp10
                             }
                             if (action == "Eat")
                             {
-<<<<<<< HEAD
                                 weight++;
                                 Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
                             }
@@ -113,9 +89,6 @@ namespace ConsoleApp10
                             {
                                 weight++;
                                 Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
-=======
-                                Console.WriteLine(name + " eats");
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
                             }
                             if (action == "MakeSound")
                             {
@@ -127,7 +100,6 @@ namespace ConsoleApp10
                             }
                             if (action == "GiveName")
                             {
-<<<<<<< HEAD
                                 Console.WriteLine("Give a name:");
                                 name = Console.ReadLine();
                                 Console.WriteLine("cat is now called " + name);
@@ -209,10 +181,6 @@ namespace ConsoleApp10
                                 Console.WriteLine("Give a name:");
                                 name = Console.ReadLine();
                                 Console.WriteLine("bird is now called " + name);
-=======
-                                name = Console.ReadLine();
-                                Console.WriteLine("Cat is now called " + name);
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
                             }
                         }
                     }
@@ -221,7 +189,4 @@ namespace ConsoleApp10
         }
     }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 23bd3c5b3fe947725a2ba58e9c5431b9af6171a0
