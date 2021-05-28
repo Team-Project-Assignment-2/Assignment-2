@@ -151,7 +151,6 @@ namespace Team_software_project
                         string name = "bird";
                         while (true)
                         {
-
                             Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
                             string action = Console.ReadLine();
 
