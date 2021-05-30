@@ -232,14 +232,14 @@ namespace Team_software_project
                         }
                         else
                         {
-                            Console.WriteLine("error");
+                            Console.WriteLine("Invalid input, please try again");
                             animal = Convert.ToInt32(Console.ReadLine());
                         }
                     }
                 }
                 else
                 {
-                    Console.WriteLine("error");
+                    Console.WriteLine("Invalid input, please try again");
                     answer = Console.ReadLine();
                 }
                 }
