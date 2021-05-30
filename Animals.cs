@@ -9,9 +9,9 @@ namespace Team_software_project
             Console.WriteLine("Welcome to the animal house!");
             Console.WriteLine("What do you want to do? [list, quit]");
             string[] animals = { "0 - bear", "1 - cat", "2 - dog", "3 - bird", "4 - sloth" };
-                string answer = Console.ReadLine();
+                string answer = Console.ReadLine();               
                 while (true)
-                {
+                {              
                     if (answer == "quit")
                     {
                         break;
@@ -23,204 +23,225 @@ namespace Team_software_project
                         {
                             Console.WriteLine(all);
                         }
-                        Console.WriteLine("Which animal do you want to see? Give number of the animal 0-3");
-                        int animal = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine(animals[animal]);
-                        if (animal == 0)
+                        
+                        Console.WriteLine("Which animal do you want to see? Give number of the animal 0-4");
+                    //int animal = Convert.ToInt32(Console.ReadLine());
+                    var animalAsString = Console.ReadLine();
+                    int animal;
+                    while (!string.IsNullOrEmpty(animalAsString))
+                    {
+                        bool parseSuccess = int.TryParse(animalAsString, out animal);
+                        if (parseSuccess)
                         {
-                            int weight = 0;
-                            string name = "bear";
-                            while (true)
+                            Console.WriteLine(animals[animal]);
+                            if (animal == 0)
                             {
+                                int weight = 0;
+                                string name = "bear";
+                                while (true)
+                                {
 
-                                Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                                string action = Console.ReadLine();
+                                    Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
+                                    string action = Console.ReadLine();
 
-                                if (action == "back")
-                                {
-                                    break;
+                                    if (action == "back")
+                                    {
+                                        break;
+                                    }
+                                    if (action == "quit")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    if (action == "Eat")
+                                    {
+                                        weight++;
+                                        Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+                                    }
+                                    if (action == "MakeSound")
+                                    {
+                                        Console.WriteLine("Growl");
+                                    }
+                                    if (action == "ComeHere")
+                                    {
+                                        Console.WriteLine(name + " walks to you");
+                                    }
+                                    if (action == "GiveName")
+                                    {
+                                        Console.WriteLine("Give a name:");
+                                        name = Console.ReadLine();
+                                        Console.WriteLine("bear is now called " + name);
+                                    }
                                 }
-                                if (action == "quit")
+                            }
+                            if (animal == 1)
+                            {
+                                int weight = 0;
+                                string name = "cat";
+                                while (true)
                                 {
-                                    Environment.Exit(0);
+
+                                    Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
+                                    string action = Console.ReadLine();
+
+                                    if (action == "back")
+                                    {
+                                        break;
+                                    }
+                                    if (action == "quit")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    if (action == "Eat")
+                                    {
+                                        weight++;
+                                        Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+                                    }
+                                    if (action == "MakeSound")
+                                    {
+                                        Console.WriteLine("Meow");
+                                    }
+                                    if (action == "ComeHere")
+                                    {
+                                        Console.WriteLine(name + " walks to you");
+                                    }
+                                    if (action == "GiveName")
+                                    {
+                                        Console.WriteLine("Give a name:");
+                                        name = Console.ReadLine();
+                                        Console.WriteLine("cat is now called " + name);
+                                    }
                                 }
-                                if (action == "Eat")
+                            }
+                            if (animal == 2)
+                            {
+                                int weight = 0;
+                                string name = "dog";
+                                while (true)
                                 {
-                                    weight++;
-                                    Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+
+                                    Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
+                                    string action = Console.ReadLine();
+
+                                    if (action == "back")
+                                    {
+                                        break;
+                                    }
+                                    if (action == "quit")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    if (action == "Eat")
+                                    {
+                                        weight++;
+                                        Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+                                    }
+                                    if (action == "MakeSound")
+                                    {
+                                        Console.WriteLine("Woof");
+                                    }
+                                    if (action == "ComeHere")
+                                    {
+                                        Console.WriteLine(name + " walks to you");
+                                    }
+                                    if (action == "GiveName")
+                                    {
+                                        Console.WriteLine("Give a name:");
+                                        name = Console.ReadLine();
+                                        Console.WriteLine("dog is now called " + name);
+                                    }
                                 }
-                                if (action == "MakeSound")
+                            }
+                            if (animal == 3)
+                            {
+                                int weight = 0;
+                                string name = "bird";
+                                while (true)
                                 {
-                                    Console.WriteLine("Growl");
+                                    Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
+                                    string action = Console.ReadLine();
+
+                                    if (action == "back")
+                                    {
+                                        break;
+                                    }
+                                    if (action == "quit")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    if (action == "Eat")
+                                    {
+                                        weight++;
+                                        Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+                                    }
+                                    if (action == "MakeSound")
+                                    {
+                                        Console.WriteLine("Chirp");
+                                    }
+                                    if (action == "ComeHere")
+                                    {
+                                        Console.WriteLine(name + " flies to you");
+                                    }
+                                    if (action == "GiveName")
+                                    {
+                                        Console.WriteLine("Give a name:");
+                                        name = Console.ReadLine();
+                                        Console.WriteLine("bird is now called " + name);
+                                    }
                                 }
-                                if (action == "ComeHere")
+                            }
+                            if (animal == 4)
+                            {
+                                int weight = 0;
+                                string name = "sloth";
+                                while (true)
                                 {
-                                    Console.WriteLine(name + " walks to you");
-                                }
-                                if (action == "GiveName")
-                                {
-                                    Console.WriteLine("Give a name:");
-                                    name = Console.ReadLine();
-                                    Console.WriteLine("bear is now called " + name);
+
+                                    Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
+                                    string action = Console.ReadLine();
+
+                                    if (action == "back")
+                                    {
+                                        break;
+                                    }
+                                    if (action == "quit")
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    if (action == "Eat")
+                                    {
+                                        weight++;
+                                        Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
+                                    }
+                                    if (action == "MakeSound")
+                                    {
+                                        Console.WriteLine("Baaaah");
+                                    }
+                                    if (action == "ComeHere")
+                                    {
+                                        Console.WriteLine(name + " walks to you");
+                                    }
+                                    if (action == "GiveName")
+                                    {
+                                        Console.WriteLine("Give a name:");
+                                        name = Console.ReadLine();
+                                        Console.WriteLine("sloth is now called " + name);
+                                    }
+
                                 }
                             }
                         }
-                        if (animal == 1)
+                        else
                         {
-                            int weight = 0;
-                            string name = "cat";
-                            while (true)
-                            {
-
-                                Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                                string action = Console.ReadLine();
-
-                                if (action == "back")
-                                {
-                                    break;
-                                }
-                                if (action == "quit")
-                                {
-                                    Environment.Exit(0);
-                                }
-                                if (action == "Eat")
-                                {
-                                    weight++;
-                                    Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
-                                }
-                                if (action == "MakeSound")
-                                {
-                                    Console.WriteLine("Meow");
-                                }
-                                if (action == "ComeHere")
-                                {
-                                    Console.WriteLine(name + " walks to you");
-                                }
-                                if (action == "GiveName")
-                                {
-                                    Console.WriteLine("Give a name:");
-                                    name = Console.ReadLine();
-                                    Console.WriteLine("cat is now called " + name);
-                                }
-                            }
-                        }
-                        if (animal == 2)
-                        {
-                            int weight = 0;
-                            string name = "dog";
-                            while (true)
-                            {
-
-                                Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                                string action = Console.ReadLine();
-
-                                if (action == "back")
-                                {
-                                    break;
-                                }
-                                if (action == "quit")
-                                {
-                                    Environment.Exit(0);
-                                }
-                                if (action == "Eat")
-                                {
-                                    weight++;
-                                    Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
-                                }
-                                if (action == "MakeSound")
-                                {
-                                    Console.WriteLine("Woof");
-                                }
-                                if (action == "ComeHere")
-                                {
-                                    Console.WriteLine(name + " walks to you");
-                                }
-                                if (action == "GiveName")
-                                {
-                                    Console.WriteLine("Give a name:");
-                                    name = Console.ReadLine();
-                                    Console.WriteLine("dog is now called " + name);
-                                }
-                            }
-                        }
-                        if (animal == 3)
-                        {
-                            int weight = 0;
-                            string name = "bird";
-                            while (true)
-                            {
-                                Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                                string action = Console.ReadLine();
-
-                                if (action == "back")
-                                {
-                                    break;
-                                }
-                                if (action == "quit")
-                                {
-                                    Environment.Exit(0);
-                                }
-                                if (action == "Eat")
-                                {
-                                    weight++;
-                                    Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
-                                }
-                                if (action == "MakeSound")
-                                {
-                                    Console.WriteLine("Chirp");
-                                }
-                                if (action == "ComeHere")
-                                {
-                                    Console.WriteLine(name + " flies to you");
-                                }
-                                if (action == "GiveName")
-                                {
-                                    Console.WriteLine("Give a name:");
-                                    name = Console.ReadLine();
-                                    Console.WriteLine("bird is now called " + name);
-                                }
-                            }
-                        }
-                        if (animal == 4)
-                        {
-                            int weight = 0;
-                            string name = "sloth";
-                            while (true)
-                            {
-
-                                Console.WriteLine("What do you want to do? [Eat, MakeSound, ComeHere, GiveName, back, quit]");
-                                string action = Console.ReadLine();
-
-                                if (action == "back")
-                                {
-                                    break;
-                                }
-                                if (action == "quit")
-                                {
-                                    Environment.Exit(0);
-                                }
-                                if (action == "Eat")
-                                {
-                                    weight++;
-                                    Console.WriteLine(name + " eats, gains 1 kg and weighs now " + weight + " kg");
-                                }
-                                if (action == "MakeSound")
-                                {
-                                    Console.WriteLine("Baaaah");
-                                }
-                                if (action == "ComeHere")
-                                {
-                                    Console.WriteLine(name + " walks to you");
-                                }
-                                if (action == "GiveName")
-                                {
-                                    Console.WriteLine("Give a name:");
-                                    name = Console.ReadLine();
-                                    Console.WriteLine("sloth is now called " + name);
-                                }
-                            }
+                            Console.WriteLine("error");
+                            animal = Convert.ToInt32(Console.ReadLine());
                         }
                     }
+                }
+                else
+                {
+                    Console.WriteLine("error");
+                    answer = Console.ReadLine();
+                }
                 }
         }
     }
